@@ -1,0 +1,216 @@
+/* 首页样式 */
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  height: 100%;
+}
+.container .sort {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #fedbd0;
+}
+.container .sort .logo {
+  padding: 64px 0 200px;
+  text-align: center;
+  font-weight: bolder;
+}
+.container .sort .logo i {
+  font-size: 36px;
+}
+.container .sort .logo p {
+  font-size: 18px;
+}
+.container .sort ul li {
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  color: #8f726f;
+}
+.container .sort ul li:hover {
+  cursor: pointer;
+  color: #000;
+  font-weight: bolder;
+}
+.container .sort ul .active {
+  color: #000;
+  font-weight: bolder;
+}
+.container .sort .order,
+.container .sort .quit {
+  width: 60px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 10px 0px;
+  color: #8f726f;
+}
+.container .sort .order:hover,
+.container .sort .quit:hover {
+  cursor: pointer;
+  color: #000;
+  font-weight: bolder;
+}
+.container .sort .quit {
+  border-bottom: 2px solid #999;
+}
+.container .sort .seach {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.container .list {
+  width: calc( 100vw - 220px );
+  float: right;
+}
+.container .list .gwc_icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fedbd0;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.container .list .gwc_icon i {
+  font-size: 30px;
+}
+.container .list .items ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .list .items ul li {
+  width: 180px ;
+  text-align: center;
+  position: relative;
+}
+.container .list .items ul li .gwc {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+.container .list .items ul li img {
+  width: 70%;
+}
+.container .shoppingCart {
+  display: none;
+  width: 350px;
+  height: 100vh;
+  background-color: #feeae6;
+  padding: 10px;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  right: 0px;
+}
+.container .shoppingCart .title {
+  font-size: 16px;
+}
+.container .shoppingCart .title span {
+  margin: 0 10px;
+}
+.container .shoppingCart .title .text {
+  font-weight: bolder;
+}
+.container .shoppingCart .pro_list ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.container .shoppingCart .pro_list ul li .iconfont {
+  width: 20px;
+}
+.container .shoppingCart .pro_list ul li .content {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  border-bottom: 2px solid #999999;
+  padding-bottom: 10px;
+}
+.container .shoppingCart .pro_list ul li .content img {
+  width: 50px;
+}
+.container .shoppingCart .pro_list ul li .content .center {
+  flex: 1;
+  margin: 0 10px;
+}
+.container .shoppingCart .pro_list ul li .content .center p {
+  font-size: 12px;
+}
+.container .shoppingCart .pro_list ul li .content .center .title {
+  font-size: 14px;
+  font-weight: bolder;
+}
+.container .shoppingCart .pro_list ul li .content .price {
+  width: 100px;
+  display: flex;
+  text-align: right;
+  font-size: 14px;
+}
+.container .shoppingCart .total {
+  margin-top: 60px;
+}
+.container .shoppingCart .total p {
+  display: flex;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.container .shoppingCart .total p .left {
+  display: block;
+  width: 50px;
+  text-align: right;
+}
+.container .shoppingCart .total p .right {
+  display: block;
+  flex: 1;
+  text-align: right;
+}
+.container .shoppingCart .total p .right .sum {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.container .shoppingCart .operation {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  margin-left: -150px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .shoppingCart .operation .del,
+.container .shoppingCart .operation .submit {
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #aaa;
+  cursor: pointer;
+}
+.container .shoppingCart .operation .del:hover,
+.container .shoppingCart .operation .submit:hover {
+  background-color: #fedbd0;
+}
+.mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff2ec;
+  opacity: 0.8;
+}

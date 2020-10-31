@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<script src="js/jquery3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer-v3.1.1/layer/layer.js"></script>
+		<script type="text/javascript">
+			// borwserRedirect
+			(function browserRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) === 'ipad';
+				var bIsIphone = sUserAgent.match(/iphone os/i) === 'iphone os';
+				var bIsMidp = sUserAgent.match(/midp/i) === 'midp';
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) === 'rv:1.2.3.4';
+				var bIsUc = sUserAgent.match(/ucweb/i) === 'web';
+				var bIsCE = sUserAgent.match(/windows ce/i) === 'windows ce';
+				var bIsWM = sUserAgent.match(/windows mobile/i) === 'windows mobile';
+				var bIsAndroid = sUserAgent.match(/android/i) === 'android';
+				if (bIsIpad || bIsIphone || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM || bIsAndroid) {
+					window.location.href = 'home.html';
+				}
+			})();
+		</script>
+
+	</head>
+	<body>
+		<div class="container">
+			<!-- 分类名称 -->
+			<div class="sort">
+				<div class="logo">
+					<i class="iconfont icon-diamonds"></i>
+					<p>SHRINE</p>
+				</div>
+				<ul>
+					<li class="active">全部</li>
+					<li>配件</li>
+					<li>服饰</li>
+					<li>家用</li>
+				</ul>
+
+				<div class="quit" onclick="exit()">退出</div>
+				<div class="order">订单</div>
+				<div class="seach iconfont icon-fangdajing"></div>
+			</div>
+			<!-- 产品列表 -->
+			<div class="list">
+				<div class="gwc_icon">
+					<i class="iconfont icon-htmal5icon29"></i>
+				</div>
+				<!-- 全部 -->
+				<div class="items">
+					<ul>
+						<!-- <li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="1"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫11</p>
+							<span>￥<i>20</i></span>
+						</li>
+						<li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="2"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫22</p>
+							<span>￥<i>30</i></span>
+						</li> -->
+
+					</ul>
+				</div>
+				<!-- 配件 -->
+				<div class="items">
+					<ul>
+						<!-- <li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="3"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2003</i></span>
+						</li>
+						<li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="4"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2004</i></span>
+						</li> -->
+
+					</ul>
+				</div>
+				<!-- 服饰 -->
+				<div class="items">
+					<ul>
+						<!-- <li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="5"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2005</i></span>
+						</li>
+						<li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="6"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2006</i></span>
+						</li> -->
+
+					</ul>
+				</div>
+				<!-- 家用 -->
+				<div class="items">
+					<ul>
+						<!-- <li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="7"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2007</i></span>
+						</li>
+						<li>
+							<i class="iconfont icon-ic_jiarugouwuche  gwc" id="8"></i>
+							<img src="img/img01.jpg" alt="">
+							<p>衬衫</p>
+							<span>￥<i>2008</i></span>
+						</li> -->
+
+					</ul>
+				</div>
+			</div>
+			<div>
+				<nav role="navigation">
+					<ul class="cd-pagination no-space" id="paging">
+<!--						<li class="button"><a class="disabled" href="#0">上一页</a></li>-->
+<!--						<li><a class="current" href="">1</a></li>-->
+<!--						<li><a onclick="getProList('allCommodity.do?curPage=2')">2</a></li>-->
+<!--						<li><a href="#0">3</a></li>-->
+<!--						<li><a href="#0">4</a></li>-->
+<!--						<li><span>...</span></li>-->
+<!--						<li><a href="#0">20</a></li>-->
+<!--						<li class="button"><a href="#0">下一页</a></li>-->
+					</ul>
+				</nav>
+			</div>
+			<!-- 购物车列表 -->
+			<div class="shoppingCart">
+				<div class="title">
+					<i class="iconfont icon-jiantouarrow483"></i>
+					<span class="text">我的购物车</span>
+					<span><i>2</i>件商品</span>
+				</div>
+				<div class="pro_list">
+					<ul>
+						<!-- <li>
+							<i class="iconfont icon-jianhao sub" id="1"></i>
+							<div class="content">
+								<img src="img/img01.jpg" />
+								<div class="center">
+									<p>数量<i>1</i></p>
+									<p class="title">衬衫</p>
+								</div>
+								<div class="price">
+									<span>小计：</span>
+									<span class="xj">￥58</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<i class="iconfont icon-jianhao sub" id="2"></i>
+							<div class="content">
+								<img src="img/img01.jpg" />
+								<div class="center">
+									<p>数量<i>1</i></p>
+									<p class="title">衬衫</p>
+								</div>
+								<div class="price">
+									<span>小计：</span>
+									<span class="xj">￥58</span>
+								</div>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+				<div class="total">
+					<p><span class="left">总计</span><span class="right"><i class="sum">111.20</i></span></p>
+				</div>
+				<div class="operation">
+					<div class="del">
+						清除购物车
+					</div>
+					<div class="submit">提交订单</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="mask"></div>
+	</body>
+</html>

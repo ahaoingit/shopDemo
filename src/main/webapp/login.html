@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>会员登录</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<script src="./js/jquery3.js" type="text/javascript"></script>
+		<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./js/checkNum.js" type="text/javascript"></script>
+		<script src="./layer-v3.1.1/layer/layer.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<!--头部-->
+			<div id="header" style="min-height: 130px;"></div>
+			<div class="container-fluid" style="height:460px;width: 98%; background:#FF2C4C url('./img/loginbg.jpg') no-repeat;">
+				<div class="row">
+					<div class="col-md-7">
+					</div>
+
+					<div class="col-md-5">
+						<div style="width:460px;border:1px solid #E7E7E7;padding:20px 0 20px 30px;border-radius:5px;margin-top:60px;background:#fff;">
+							<font style="color: #666;font-size: 22px;font-weight: normal;padding-right: 17px;">会员登录</font>USER LOGIN 
+							<div id="loginMsg">&nbsp;</div>
+							<form class="form-horizontal" id="loginForm" method="post">
+								<input type="hidden" name="method" value="login">
+								<div class="form-group">
+									<label for="username" class="col-sm-2 control-label">用户名</label>
+									<div class="col-sm-6">
+										<input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-2 control-label">密码</label>
+									<div class="col-sm-6">
+										<input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="code" class="col-sm-2 control-label">验证码</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="code" placeholder="请输入验证码">
+									</div>
+									<div class="col-sm-3">
+										<canvas id="canvas"></canvas>
+										<a  id="changeImg" style="text-decoration: none; ">再换一张</a>
+									</div>
+
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<div class="checkbox">
+											<a href="./register.html">还没有账号,去注册</a>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<input type="button" width="100" onclick="login()" value="登录" id="submit" border="0" style="background-color:#CD062D;height:35px;width:100px;color:white;">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--尾部-->
+			<div id="footer"  style="min-height: 203px;"></div>
+		</div>
+	<script src="./js/login.js"></script>
+	</body>
+</html>

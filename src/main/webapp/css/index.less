@@ -1,0 +1,247 @@
+/* 首页样式 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+	// 分类样式 
+	height: 100%;
+	.sort{
+		position: fixed;
+		top: 0px;
+		width: 200px;
+		height: 100%;
+		background-color: #fedbd0;
+			.logo{
+				padding: 64px 0px 200px;
+				text-align: center;
+				font-weight: bolder;
+				i{
+					font-size: 36px;
+				}
+				p{
+					font-size: 18px;
+				}
+			}
+			ul{
+				li{
+					text-align: center;
+					font-size: 16px;
+					height: 50px;
+					line-height: 50px;
+					color: #8f726f;
+					
+					&:hover{
+						cursor: pointer;
+						color: #000;
+						font-weight: bolder;
+					}
+				}
+				.active{
+					color: #000;
+					font-weight: bolder;
+				}
+				
+			}
+			.order,.quit{
+				width: 60px;
+				margin: 0px auto;
+				text-align: center;
+				padding:10px 0px;
+				color: #8f726f;
+				&:hover{
+					cursor: pointer;
+					color: #000;
+					font-weight: bolder;
+				}
+			}
+			.quit{
+				border-bottom: 2px solid #999;
+			}
+			
+			
+			.seach{
+				font-size: 18px;
+				text-align: center;
+				margin-top: 50px;
+				cursor: pointer;
+			}
+	}
+	// 产品列表样式 
+	.list{
+		width:~'calc( 100vw - 220px )';
+		float: right;
+		.gwc_icon{
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			background-color: #fedbd0;
+			position: fixed;
+			top: 100px;
+			right: 30px;
+			text-align: center;
+			cursor: pointer;
+			i{
+				font-size: 30px;
+			}
+		}
+		
+		.items{
+			ul{
+				// margin-left: 250px;
+				display: flex;
+				flex-wrap: wrap;
+				li{
+					width:180px ;
+					// padding: 20px;
+					text-align: center;
+					position: relative;
+					.gwc{
+						position: absolute;
+						top: 10px;
+						right: 30px;
+						cursor: pointer;
+					}
+					
+					img{
+						width: 70%;
+					}
+					p{
+						
+					}
+					span{
+						
+					}
+				}
+			}
+		}
+
+	}
+	//购物车列表
+	.shoppingCart{
+		display: none;
+		width: 350px;
+		height: 100vh;
+		background-color: #feeae6;
+		padding: 10px;
+		position: fixed;
+		z-index: 10;
+		top: 0px;
+		right: 0px;
+		.title{
+			font-size: 16px;
+			.iconfont{
+				
+			}
+			span{
+				margin: 0 10px;
+			}
+			.text{
+				
+				font-weight: bolder;
+			}
+		}
+		.pro_list{
+			ul{
+				li{
+					display: flex;
+					align-items: center;
+					margin: 10px 0;
+				   .iconfont{
+					   width: 20px;
+				   }
+				   .content{
+					   flex: 1;
+					   margin: 0 20px;
+					   display: flex;
+					   border-bottom: 2px solid #999999;
+					   padding-bottom: 10px;
+					   img{
+						   width: 50px;
+					   }
+					   .center{
+						   flex:1;
+						   margin: 0 10px;
+						   p{
+							   font-size: 12px;
+						   }
+						   .title{
+							   font-size: 14px;
+							   font-weight: bolder;
+						   }
+					   }
+					   .price{
+					   		width: 100px;
+					   		display: flex;
+							text-align: right;
+							font-size: 14px;
+					   }
+				   }
+				   
+				}
+			}
+		}
+	    .total{
+			margin-top: 60px;
+			p{
+				display: flex;
+				font-size:14px;
+				margin-top: 5px;
+				.left{
+					display: block;
+					width: 50px;
+					text-align: right;
+				}
+				.right{
+					display: block;
+					flex: 1;
+					text-align: right;
+					.sum{
+						font-size:16px;
+						font-weight: bolder;
+					}
+				}
+				
+			}
+		}
+		.operation{
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			width: 300px;
+			height: 40px;
+			line-height: 40px;
+			margin: 0 auto;
+			margin-left: -150px;
+			display: flex;
+			justify-content: space-between;
+			
+			.del,.submit{
+				width: 140px;
+				height: 40px;
+				text-align: center;
+				border-radius: 5px;
+				background-color: #aaa;
+				cursor: pointer;
+				&:hover{
+					background-color: #fedbd0;
+				}
+			}
+			
+		}
+	    
+	}
+}
+
+// 遮罩效果
+.mask{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff2ec;
+	opacity:0.8;
+}
